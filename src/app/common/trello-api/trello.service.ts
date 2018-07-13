@@ -22,7 +22,7 @@ export class TrelloService {
   }
 
   getBoards(): Observable<Boards[]> {
-    return this.httpClient.get<Boards[]>('https://api.trello.com/1/members/me/boards')
+    return this.httpClient.get<Boards[]>('https://api.trello.com/1/members/me/boards?filter=open&fields=all&lists=none&memberships=none&organization_fields=name%2CdisplayName\'')
       .pipe(map(res => {
           const data = [];
           for (let i = 0; i < res.length; i++) {

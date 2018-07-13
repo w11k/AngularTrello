@@ -33,7 +33,7 @@ export class TrelloBoardService {
   }
 
 
-  changeBoard(event) {
+  changeBoard() {
     this.loadSpinner = true;
     this.commentsDone = false;
     this.cardsDone = false;
